@@ -1,0 +1,39 @@
+{
+  "name": "frankfoerster/cakephp-bitly",
+  "description": "CakePHP Bitly Plugin",
+  "type": "cakephp-plugin",
+  "keywords": [
+    "cakephp",
+    "bitly",
+    "url",
+    "shortener",
+    "library"
+  ],
+  "homepage": "https://github.com/frankfoerster/cakephp-bitly",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Frank Förster",
+      "homepage": "http://frankfoerster.com",
+      "role": "Author"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.16",
+    "cakephp/cakephp": "3.1.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.*",
+    "cakephp/cakephp-codesniffer": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "FrankFoerster\\Bitly\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "FrankFoerster\\Bitly\\Test\\": "tests"
+    }
+  }
+}
