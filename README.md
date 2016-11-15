@@ -14,7 +14,7 @@ Run the following command
 composer require frankfoerster/cakephp-bitly
 ```
 
-## Configuration
+## Enable the Plugin
 
 You can load the plugin using the shell command:
 
@@ -79,3 +79,11 @@ try {
     // handle any of the exceptions
 }
 ```
+
+The result of the shorten($url) call is a response object containing the data returned from the bit.ly API call. It consists of the following properties:
+
+* **new_hash** - designates if this is the first time this long_url was shortened by this user. The return value will equal 1 the first time a long_url is shortened. It will also then be added to the user history.
+* **url** - the actual Bitlink that should be used, and is a unique value for the given Bitly account.
+* **hash** - a bitly hash for long_url which is unique to the given account.
+* **global_hash** - a bitly hash for long_url which can be used to track aggregate stats across all Bitlinks that point to the same long_url.
+* **long_url** - an echo back of the longUrl request parameter. This may not always be equal to the URL requested, as some URL normalization may occur (e.g., due to encoding differences, or case differences in the domain). This long_url will always be functionally identical the the request parameter.
